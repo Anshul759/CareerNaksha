@@ -1,0 +1,11 @@
+#top-panel{
+    height: 100px;
+    width: 100%;
+}
+
+#panel-logo{
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0px auto; 
+}

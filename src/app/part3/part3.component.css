@@ -1,0 +1,123 @@
+#contentbox-3{
+    height: 650px;
+    border: 1px solid white;
+    width: 100%;
+    background: url('../../assets/images/part3bgl.png'), url('../../assets/images/part3bgr.png'), linear-gradient(0.71deg, #FFFFFF -193.8%, #C9E6FF 464.4%);
+    background-position: contain,contain;
+    background-position: left bottom,right;
+    background-repeat: no-repeat,no-repeat;
+}
+
+p{
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+form{
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    height: auto;
+    width: 40%;
+    margin: 40px auto;
+    padding: 40px;
+}
+
+.form-group{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 15px auto;
+    height: 60px;
+    padding: 0px;
+}
+
+input[type=text],[type=email]{
+    width: 100%;
+    margin: 5px auto;
+    height: 25px;
+    padding: 6px;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+textarea{
+    width: 100%;
+    margin: 5px auto;
+    height: auto;
+    resize: none;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+
+label{
+    font-family: Poppins;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+button{
+    height: 40px;
+    width: 99px;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #10f190;
+    border: none;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+input:hover,textarea:hover,select:hover{
+    border: none;
+    border-bottom: 2px solid #C9E6FF;
+}
+
+input[type=text]:focus,input[type=email]:focus{
+    border: none;
+}
+
+select{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 5px;
+    margin-top: 7px;
+}
+
+.err{
+    border: none;
+    background-color:rgb(245, 176, 176);
+    border-radius: 45%;
+    color: red;
+    padding: 2px;
+    opacity: 1;
+    position: absolute;
+    font-size: 12px;
+    font-family: Poppins;
+    font-weight: 400;
+}
+
+button:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    
+}
+
+option{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: #C9E6FF;
+}

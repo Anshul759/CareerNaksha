@@ -1,0 +1,43 @@
+<div id="contentbox-3">
+    <p>Join Us</p>
+        <form #joinUs="ngForm" (ngSubmit)="submitJoin(joinUs.form);">
+            <div class="form-group" style="width: 48%; float: left;">
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" name="firstName" class="form-control" required ngModel #firstName="ngModel" placeholder="Robert Lee" minlength="3" maxlength="10"/>
+                <div *ngIf="firstName.touched && firstName.errors">
+                    <div class="alert alert-danger" *ngIf="firstName.errors.required" class="err">First Name is required</div>
+                    <div class="alert alert-danger" *ngIf="firstName.errors.minlength" class="err">Atleast 3 characters</div>
+                </div>
+            </div>
+            <div class="form-group" style="width: 48%;overflow: hidden;">
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" class="form-control" required ngModel #lastName="ngModel" placeholder="Robert Lee" maxlength="10"/>
+                <div *ngIf="lastName.touched && lastName.errors">
+                    <div class="alert alert-danger" *ngIf="lastName.errors.required" class="err"> Last Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" required email ngModel #email="ngModel" placeholder="kevin.jones@mail.com" maxlength="30"/>
+                <div *ngIf="email.touched && email.errors">
+                    <div class="alert alert-danger" *ngIf="email.errors.required" class="err" >EmailID is required</div>
+                    <div class="alert alert-danger" *ngIf="email.errors.email" class="err">Invalid Email Address</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <select class="form-control" name="city" ngModel #cityField="ngModel" required >
+                    <option value="" selected disabled >Select One</option>
+                    <option *ngFor="let city of cities" [value]="city.id">{{ city.name }}</option>
+                </select> 
+                <div *ngIf="cityField.touched && cityField.errors">
+                    <div class="alert alert-danger" *ngIf="cityField.touched && !cityField.valid" class="err">The City Name is required</div>
+                </div> 
+            </div>
+            <div class="form-group">
+                <label for="msg">Message</label>
+                <textarea id="msg" rows="4" maxlength="100" name="msg" class="form-control" ngModel #msg="ngModel" placeholder="Type Your Message Here(within 100 words)"></textarea>
+            </div>
+            <button class="btn btn-primary" [disabled]="!joinUs.valid">Submit</button>
+        </form>
+</div>
